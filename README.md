@@ -14,6 +14,6 @@ Archivos y documentacion generada a partir de la estancia preprofesional realiza
  
 Descripción: Poder ejecutar el modelo prototipo en Plotly de lo que sería la extracción de entidades3. 
 
-> Entrenar_un_modelo_de_extracción_de_entidades.ipynb4. 
+> Entrenar_un_modelo_de_extracción_de_entidades.ipynb. 
 
 > Entrenar_un_modelo_de_extracción_de_relaciones.ipynbNota: los recursos de entrenamiento de 3. y 4. se encuentran en las carpetas que tienen por nombre Recursos.
