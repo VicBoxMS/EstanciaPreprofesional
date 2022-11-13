@@ -21,4 +21,3 @@ Archivos y documentacion generada a partir de la estancia preprofesional realiza
 
 #### 4. Entrenar_un_modelo_de_extracción_de_relaciones.ipynb
 
-Nota: los recursos de entrenamiento de 3. y 4. se encuentran en las carpetas que tienen por nombre Recursos.
