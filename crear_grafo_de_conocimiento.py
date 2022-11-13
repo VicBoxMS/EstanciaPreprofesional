@@ -121,9 +121,15 @@ def crear_grafo_de_conocimiento(data_frame,riesgo_de_interes,informacion_base_re
             b = Node(articulos_tipo_entidades_stopwords[c][i+1],name=str(entities[i+1]),
                     municipio= 'guadalajara',fecha='11/10/20')       ##crear un nodo con ciertos atributos
             ab=Relationship(a,'r-implicita',b)                        ##establecer la relacion entre los nodos
-            graph.create(ab)                                                                                          
-  graph.query("MATCH (n) WITH toLower(n.name) as name, collect(n) as nodes CALL apoc.refactor.mergeNodes(nodes) yield node RETURN *")
-  graph.query("match ()-[r]->()  match (s)-[r]->(e)  with s,e,type(r) as typ, tail(collect(r)) as coll  foreach(x in coll | delete x)")
+            graph.create(ab)
+  """
+  parche del dia 03-11-2022
+  la función .query() ya no es valida y es sustituida por .run()
+  """
+  #graph.query("MATCH (n) WITH toLower(n.name) as name, collect(n) as nodes CALL apoc.refactor.mergeNodes(nodes) yield node RETURN *")
+  #graph.query("match ()-[r]->()  match (s)-[r]->(e)  with s,e,type(r) as typ, tail(collect(r)) as coll  foreach(x in coll | delete x)")
+  graph.run("MATCH (n) WITH toLower(n.name) as name, collect(n) as nodes CALL apoc.refactor.mergeNodes(nodes) yield node RETURN *")
+  graph.run("match ()-[r]->()  match (s)-[r]->(e)  with s,e,type(r) as typ, tail(collect(r)) as coll  foreach(x in coll | delete x)")  
 
 """
 #Por ejemplo se podria utilizar los siguientes datos para utilizar la funcion
